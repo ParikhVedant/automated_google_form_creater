@@ -119,15 +119,20 @@ def setAnswer(n,resetPosition=True):
 async def asyncInputFunc(message):
     return int(input(message))
 
-
 #START
-x=int(input("Number of questions"))
-responseTime = 0.15     
-
 inputList = []
 n = 0
-for j in range(0,x):
-    inputList.append(int(input("Enter Number")))
+responseTime = 0.1   
+
+while True:
+    val = int(input("Enter Number, Enter -1 to start"))
+    if val==-1:
+        x=len(inputList)
+        break 
+    inputList.append(val)
+# x=int(input("Number of questions"))
+# for j in range(0,x):
+#     inputList.append(int(input("Enter Number")))
 
 # for j in range(0,x):
 #     print(inputList.pop(0))
@@ -139,7 +144,6 @@ time.sleep(5)
 while x>0:
     copyFunc()
     tabForwardFunc()
-    selectAllFunc()
     pasteFunc()
     tabFunc()
     tabFunc()
