@@ -145,15 +145,15 @@ while x>0:
     tabFunc()
     tabFunc()
 
-    # #First Clearing Options
-    # if x==lengthOfList:
-    #     for i in range(0,4):
-    #         deleteFunc()
-    #         tabFunc()
-    #         tabFunc()
-    #         tabFunc()
-    #     for i in range(0,12):
-    #         shiftTabFunc()
+    #First Clearing Options
+    if x==lengthOfList:
+        for i in range(0,4):
+            deleteFunc()
+            tabFunc()
+            tabFunc()
+            tabFunc()
+        for i in range(0,12):
+            shiftTabFunc()
 
     for i in range(0,4):
         tabBackwardFunc()
@@ -212,5 +212,5 @@ while x>0:
     tabBackwardFunc()
     downFunc()
     ctrlLeftFunc()
-    # rightFunc()     
+    rightFunc()     
     x-=1
