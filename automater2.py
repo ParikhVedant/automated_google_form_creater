@@ -36,14 +36,14 @@ def tabBackwardFunc():
 def tabFunc():
     keyboard.press(Key.tab)
     keyboard.release(Key.tab)
-    time.sleep(0.075)
+    time.sleep(0.10)
 
 def shiftTabFunc():
     keyboard.press(Key.shift)
     keyboard.press(Key.tab)
     keyboard.release(Key.shift)
     keyboard.release(Key.tab)
-    time.sleep(0.075)
+    time.sleep(0.10)
 
 def downFunc():
     keyboard.press(Key.down)
@@ -106,9 +106,11 @@ def setAnswer(n,resetPosition=True):
         #3 times ----- Tab 22 times
         tabFunc()       
     spaceFunc()
+    time.sleep(responseTime+responseTime)
     for i in range(0,n):
         tabFunc()
     spaceFunc()
+    time.sleep(responseTime+responseTime)    
     for i in range(0,6-n):
         tabFunc()
     enterFunc()
@@ -122,7 +124,7 @@ async def asyncInputFunc(message):
 #START
 inputList = []
 n = 0
-responseTime = 0.1   
+responseTime = 0.2
 
 while True:
     val = int(input("Enter Number, Enter -1 to start"))
