@@ -129,36 +129,31 @@ responseTime = 0.2
 while True:
     val = int(input("Enter Number, Enter -1 to start"))
     if val==-1:
-        x=len(inputList)
+        lengthOfList=len(inputList)
         break 
     inputList.append(val)
-# x=int(input("Number of questions"))
-# for j in range(0,x):
-#     inputList.append(int(input("Enter Number")))
-
-# for j in range(0,x):
-#     print(inputList.pop(0))
 
 print(inputList)
-# sys.exit(0)
-
+x = lengthOfList
 time.sleep(5)
 while x>0:
     copyFunc()
     tabForwardFunc()
     pasteFunc()
+    # deleteFunc()
     tabFunc()
     tabFunc()
     tabFunc()
-    
-    #Clearing Options
-    for i in range(0,4):
-        deleteFunc()
-        tabFunc()
-        tabFunc()
-        tabFunc()
-    for i in range(0,12):
-        shiftTabFunc()
+
+    # #First Clearing Options
+    # if x==lengthOfList:
+    #     for i in range(0,4):
+    #         deleteFunc()
+    #         tabFunc()
+    #         tabFunc()
+    #         tabFunc()
+    #     for i in range(0,12):
+    #         shiftTabFunc()
 
     for i in range(0,4):
         tabBackwardFunc()
@@ -195,17 +190,27 @@ while x>0:
 
     enterFunc()
     time.sleep(1.25)
-    deleteFunc()
+
+    #Clearing Options
+    for i in range(0,5):
+        deleteFunc()
+        tabFunc()
+        tabFunc()
+        tabFunc()
 
     #REMOVE PREVIOUS ANSWER
     if n<5 and n>0:
-        for i in range(0,15):
-            tabFunc()
+        # for i in range(0,15):
+        #     tabFunc()
         setAnswer(n,False)
         time.sleep(responseTime)
+    else:
+        for i in range(0,15):
+            shiftTabFunc()
+
 
     tabBackwardFunc()
     downFunc()
     ctrlLeftFunc()
-    rightFunc()     
+    # rightFunc()     
     x-=1
